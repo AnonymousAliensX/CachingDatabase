@@ -3,12 +3,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('C:\\Users\\Sawan Sihag\\appKeys\\CachingDatabaseProject.jks')
-            storePassword 'anonymousaliens'
-        }
-    }
     namespace 'com.anonymousaliens.cachingdatabaseproject'
     compileSdk 33
 
