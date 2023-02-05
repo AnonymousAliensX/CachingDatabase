@@ -45,7 +45,7 @@ public class DataSnapShot {
 //            System.out.println("Value Node is Null");
             return dataSnapShots;
         }
-        for (Iterator<String> it = valueNode.fieldNames(); it.hasNext();) {
+        for (Iterator<String> it = valueNode.deepCopy().fieldNames(); it.hasNext();) {
             String childName = it.next();
             dataSnapShots.add(new DataSnapShot(this.jsonNode,
                     new Path(this.path.getPathList()+"/"+childName)));
