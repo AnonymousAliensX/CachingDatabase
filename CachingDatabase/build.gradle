@@ -52,7 +52,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.anonymousaliensx'
             artifactId = 'cachingdatabase'
-            version = '1.01'
+            version = '1.02'
 
             afterEvaluate {
                 from components.release
