@@ -1,12 +1,9 @@
 package com.anonymousaliens.cachingdatabase;
 
 import androidx.annotation.NonNull;
-
-
 import com.anonymousaliens.cachingdatabase.Exceptions.MappingException;
 import com.anonymousaliens.cachingdatabase.Utilities.ValueMapper;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.collect.Iterators;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,7 +57,13 @@ public class DataSnapShot {
         JsonNode currentNode = this.path.takeToPathGet(this.jsonNode);
         if(currentNode == null)
             return 0;
-        return Iterators.size(currentNode.fieldNames());
+        int count = 0;
+        Iterator<String> s = currentNode.fieldNames();
+        while (s.hasNext()){
+            s.next();
+            count += 1;
+        }
+        return count;
     }
 
     public ArrayList<DataSnapShot> getSnapshotArray(){
