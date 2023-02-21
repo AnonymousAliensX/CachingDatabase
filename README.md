@@ -16,6 +16,7 @@ allprojects {
 dependencies {
     implementation 'com.github.AnonymousAliensX:CachingDatabase:1.04'
 }
+
 ```  
   
   Enjoy :)
